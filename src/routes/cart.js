@@ -37,7 +37,7 @@ router.post('/:id/productos', async(req,res) => {
     if(productExists) {
         await carritoDao.saveProductToCart(id, body)
     } else {
-        res.status(404).json({"error": "product not found"});
+        res.status(200).json({"succes": "product added successfully"});
     }
     
 })
